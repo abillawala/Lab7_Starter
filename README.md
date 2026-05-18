@@ -1,6 +1,4 @@
-
-
-
-
-
-
+1. Within a GitHub action that runs whenever code is pushed. This functions as a safety net so whenever there is a change in code, it consistently runs tests to catch any errors.
+2. No because the end-to-end test are designed to mimic a real user's workflow which means interacting with the UI and DOM. Unit tests are more fitting for that job and running the test on a function's return value would be inefficient and slow.
+3. Navigation mode is designed to audit the webpage's initial page load performance. Based on the audit configurations run it looks at the site from the start of the initial request to the visual metrics and calculating different values like First Contentful Paint and Total Blocking Time. It basically evaluates how fast the site feels to a user as soon as they open the page. Snapshot mode, is as the word describes, it looks at the state of the page at a single moment. Since its looking at a static moment, it focuses its audit configurations on accessibility, SEO elements, DOM configurations after there has been some iteraction from the user with the webpage. Therefore this mode skips the load metrics that the navigation mode looks at.
+4. (1) Add a meta description to the document header. In snapshot mode the SEO report flagged this. (2) Add long attribute to <html> tage. Also flagged in snapshot mode, this would improve the accessibility when it comes to recognizing the language being used instantly. (3) Enable text compression. This was flagged in navigation mode and would cut down netowrk latency.
